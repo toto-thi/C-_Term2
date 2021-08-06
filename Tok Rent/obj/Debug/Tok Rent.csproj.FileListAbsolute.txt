@@ -12,3 +12,4 @@ D:\C# Project\Vehicle_Rent\Tok Rent\Tok Rent\obj\Debug\Tok Rent.exe
 D:\C# Project\Vehicle_Rent\Tok Rent\Tok Rent\obj\Debug\Tok Rent.pdb
 D:\C# Project\Vehicle_Rent\Tok Rent\Tok Rent\obj\Debug\Tok_Rent.Auth.resources
 D:\C# Project\Vehicle_Rent\Tok Rent\Tok Rent\obj\Debug\Tok_Rent.MainForm.resources
+D:\C# Project\Vehicle_Rent\Tok Rent\Tok Rent\obj\Debug\Tok_Rent.DesignHere.resources

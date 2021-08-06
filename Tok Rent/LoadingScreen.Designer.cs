@@ -47,8 +47,8 @@ namespace Tok_Rent
             this.guna2GradientPanel1.Controls.Add(this.guna2PictureBox1);
             this.guna2GradientPanel1.Controls.Add(this.pnEnd);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.Silver;
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.WhiteSmoke;
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.Turquoise;
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.Cyan;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
@@ -81,7 +81,7 @@ namespace Tok_Rent
             // 
             // pnSlide
             // 
-            this.pnSlide.BackColor = System.Drawing.Color.SaddleBrown;
+            this.pnSlide.BackColor = System.Drawing.Color.OrangeRed;
             this.pnSlide.Location = new System.Drawing.Point(1, 1);
             this.pnSlide.Name = "pnSlide";
             this.pnSlide.Size = new System.Drawing.Size(39, 15);
@@ -99,6 +99,7 @@ namespace Tok_Rent
             this.ClientSize = new System.Drawing.Size(469, 446);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoadingScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

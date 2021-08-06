@@ -88,6 +88,11 @@ namespace Tok_Rent
             pnRental.Show();
             pnDashboard.Hide();
 
+            //load data
+            loadVehicleType();
+            loadCustomer();
+            loadVehicleReg();
+
         }
 
         private void btnBill_Click(object sender, EventArgs e)
@@ -145,6 +150,58 @@ namespace Tok_Rent
             lbShowTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
 
+        //start retrieve data from db
+        dbconnect db = new dbconnect();
+        string query;
 
+        //load data to rent section
+
+        private void loadVehicleType()
+        {
+            query = "select * from tb_vehicle_type";
+
+            db.EXE(query);
+
+            cbVehivleType.ValueMember = "type_id";
+            cbVehivleType.DisplayMember = "type_name";
+            cbVehivleType.DataSource = db.dt;
+        }
+
+        private void loadVehicleReg()
+        {
+            db.addParams("@typeCar", cbVehivleType.SelectedValue.ToString());
+            query = "select * from tb_vehicle where v_type = @typeCar and v_status = 1";
+            db.EXE(query);
+
+            cbVReg.ValueMember = "v_id";
+            cbVReg.DisplayMember = "v_vehicle_registration";
+            cbVReg.DataSource = db.dt;
+        }
+
+        //private void ShowRate()
+        //{
+        //    db.addParams("@typeCar", cbVehivleType.SelectedValue.ToString());
+        //    query = ("select * from tb_rate where vehicle_type = @typeCar");
+        //    db.EXE(query);
+
+        //    cbRate.ValueMember = "rate_id";
+        //    cbRate.DisplayMember = "rate_price";
+        //    cbRate.DataSource = db.dt;
+        //}
+        private void loadCustomer()
+        {
+            query = "select c_id, c_name from tb_customer";
+            db.EXE(query);
+
+            cbCustomer.ValueMember = "c_id";
+            cbCustomer.DisplayMember = "c_name";
+            cbCustomer.DataSource = db.dt;
+        }
+
+        private void cbVehivleType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadVehicleReg();
+            //ShowRate();
+        }
     }
 }
